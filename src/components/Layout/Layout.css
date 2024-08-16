@@ -1,0 +1,110 @@
+.feed-container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 2.2fr 6.8fr 3fr;
+    grid-template-areas:
+        "nav nav nav"
+        "left middle right";
+    height: 100vh;
+}
+
+.feed-nav {
+    grid-area: nav;
+    background-color: var(--clr-white);
+    padding: 20px 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 2.5fr 9.5fr;
+}
+
+.feed-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.feed-logo h4 {
+    font-size: var(--size-lg);
+    color: var(--clr-gray-1000);
+}
+
+
+.left-sidebar {
+    grid-area: left;
+    overflow: hidden;
+}
+
+
+.middle-content,
+.right-sidebar {
+    padding: 10px;
+    overflow-y: scroll;
+    height: 100%;
+    scrollbar-width: thin;
+    /* For Firefox */
+    scrollbar-color: transparent transparent;
+    /* For Firefox */
+}
+
+.middle-content {
+    /* background-color: var(--clr-gray-100); */
+    background-color: palevioletred;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.right-sidebar {
+    background-color: var(--clr-white);
+}
+
+.middle-content::-webkit-scrollbar,
+.right-sidebar::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.middle-content,
+.right-sidebar {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+.middle-content:active,
+.right-sidebar:active {
+    scrollbar-color: #aaa #f0f0f0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .feed-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "nav"
+            "middle";
+    }
+
+    .left-sidebar {
+        /* grid-area: bottom-nav; */
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        background-color: white;
+        /* flex-direction: row;
+        justify-content: space-around;
+        padding: 0;
+        border-top: 1px solid #ddd; */
+    }
+
+
+    .middle-content {
+        grid-area: middle;
+    }
+
+    .right-sidebar {
+        display: none;
+    }
+}

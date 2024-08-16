@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "ass@gmail.com",
+      "name": "Anika Tahsin",
+      "password": "tahani516054",
+      "dob": "2024-08-02",
+      "gender": "female"
+    },
+    {
+      "id": "c176",
+      "email": "a@gmail.com",
+      "name": "tahsin",
+      "password": "123456",
+      "dob": "2024-08-03",
+      "gender": "female"
+    }
+  ]
+}

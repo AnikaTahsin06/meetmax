@@ -1,21 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Signup from './pages/Signup/Signup';
-import Signin from './pages/Signin/Signin';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Authentication from './pages/Authentication/Authentication';
 import Feed from './pages/Feed/Feed';
-import ForgotPassword from './pages/ForgotPassword/ForgotPassword';
+// import ForgotPassword from './pages/ForgotPassword/ForgotPassword';
 
 function App() {
 
   return (
     <Router>
       <Routes>
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/signin" element={<Signin />} />
-        <Route path="/" element={<Feed />} />
-        <Route path="/forgotPassword" element={<ForgotPassword />} />
+        <Route path="/" element={<Navigate to="/auth" />} /> {/* Redirect to authentication by default */}
+        <Route path="/auth/*" element={<Authentication />} />
+        <Route path="/feed/*" element={<Feed />} />
       </Routes>
     </Router>
   )
