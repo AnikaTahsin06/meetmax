@@ -2,7 +2,7 @@ import React from 'react';
 import './Layout.css';
 import NavBar from './NavBar';
 import LeftSidebar from '../LeftSidebar/LeftSidebar';
-import RightSidebar from './RightSidebar';
+import RightSidebar from '../RightSidebar/RightSidebar';
 
 function Layout({ children }) {
     return (

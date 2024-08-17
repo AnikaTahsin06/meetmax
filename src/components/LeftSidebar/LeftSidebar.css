@@ -10,7 +10,7 @@
 
 .left-menu .sidebar-item {
     text-decoration: none;
-    color: #4a5568; /* Adjust color based on your theme */
+    color: #4a5568;  
     margin: 5px 0;
     display: flex;
     align-items: center;
@@ -19,10 +19,13 @@
     transition: background-color 0.3s ease;
 }
 
-.left-menu .sidebar-item.active, 
-.left-menu .sidebar-item:hover {
-    background-color: #4a5568; /* Active state background color */
+.left-menu .sidebar-item.active {
+    background-color: #4a5568;  
     color: white;
+}
+
+.left-menu .sidebar-item:hover {
+    background-color: var(--clr-gray-200);
 }
 
 .left-menu .sidebar-item .icon {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
-import MiddleContent from '../../components/Layout/MiddleContent';
+import MiddleContent from '../../components/MiddleContent/MiddleContent';
 import Layout from '../../components/Layout/Layout';
 import Profile from '../../components/Layout/Profile';
 

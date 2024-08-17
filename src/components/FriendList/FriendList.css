@@ -1,0 +1,82 @@
+.friends-list {
+    /* padding: 15px; */
+}
+
+.friends-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.friends-list-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4a5568;
+    /* Adjust to your theme */
+}
+
+.friends-list-options {
+    float: right;
+    font-size: 18px;
+    color: #4a5568;
+    cursor: pointer;
+}
+
+.friend-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.friend-info {
+    display: flex;
+    align-items: center;
+}
+
+.friend-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.friend-initials {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #4a5568;
+    /* Adjust to your theme */
+    margin-right: 10px;
+}
+
+.friend-name {
+    position: relative;
+    font-size: 14px;
+    color: #4a5568;
+    /* Adjust to your theme */
+}
+
+.active-indicator {
+    width: 8px;
+    height: 8px;
+    background-color: #28a745;
+    /* Green color for active status */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -10px;
+}
+
+.last-active {
+    font-size: 12px;
+    color: #999;
+}

@@ -1,0 +1,12 @@
+.comments-section {
+    margin-top: 10px;
+}
+
+.comment {
+    border-top: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.comment p {
+    margin: 0;
+}

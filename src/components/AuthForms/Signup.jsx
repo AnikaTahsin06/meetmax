@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import './Signup.css';
+import { validateSignupForm } from '../../utils/validation';
+import { createUser } from '../../services/userService';
+import './AuthForms.css';
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -14,41 +15,30 @@ const Signup = () => {
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
 
-  const validate = () => {
-    let formErrors = {};
-    if (!formData.email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
-      formErrors.email = 'Invalid email format';
-    }
-    if (formData.password.length < 6) {
-      formErrors.password = 'Password must be at least 6 characters long';
-    }
-    if (!formData.gender) {
-      formErrors.gender = 'Please select a gender';
-    }
-    return formErrors;
-  };
-
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const validationErrors = validate();
+    const validationErrors = validateSignupForm(formData);
+    
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
     }
 
     try {
-      await axios.post('http://localhost:8000/users', formData);
+      await createUser(formData);
       navigate('/signin');
     } catch (error) {
-      console.error('Error signing up:', error);
+      console.error(error.message);
     }
   };
+
   return (
     <div className="container form__container">
       <div className="form__body">

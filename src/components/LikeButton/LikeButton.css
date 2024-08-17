@@ -1,0 +1,10 @@
+.like-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #007bff;
+}
+
+.like-button.liked {
+    color: #dc3545;
+}

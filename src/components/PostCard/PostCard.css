@@ -1,0 +1,37 @@
+.post-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    /* max-width: 600px; */
+    /* margin: auto; */
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+}
+
+.user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-content {
+    margin-top: 20px;
+}
+
+.post-images img {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
