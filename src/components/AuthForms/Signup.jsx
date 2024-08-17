@@ -25,7 +25,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validateSignupForm(formData);
-    
+
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
@@ -33,71 +33,92 @@ const Signup = () => {
 
     try {
       await createUser(formData);
-      navigate('/signin');
+      navigate('signin');
     } catch (error) {
       console.error(error.message);
     }
   };
 
   return (
-    <div className="container form__container">
-      <div className="form__body">
-        <div className="form__header">
+    <div className="container form-container">
+      <div className="form-body">
+        <div className="form-header">
           <h2>Getting Started</h2>
           <p>Create an account to continue and connect with the people.</p>
         </div>
-        <div className="signup__options">
-          <button className="google__signin">
+        <div className="signup-options">
+          <button className="google-signin">
             <i className='fab fa-google'></i> Log in with Google
           </button>
-          <button className="apple__signin">
+          <button className="apple-signin">
             <i className='fab fa-apple'></i> Log in with Apple
           </button>
         </div>
         <div className="divider">
           <span>OR</span>
         </div>
-        <form className="auth__form" onSubmit={handleSubmit}>
-          <input type='email'
+        <form className="auth-form" onSubmit={handleSubmit}>
+          <input
+            type='email'
             name='email'
             placeholder='Your Email'
             value={formData.email}
-            onChange={handleChange} />
+            onChange={handleChange}
+          />
           {errors.email && <p className='error'>{errors.email}</p>}
-          <input type='text'
+
+          <input
+            type='text'
             name='name'
             placeholder='Your Name'
             value={formData.name}
-            onChange={handleChange} />
-          <input type='password'
+            onChange={handleChange}
+          />
+          {errors.name && <p className='error'>{errors.name}</p>}
+
+          <input
+            type='password'
             name='password'
             placeholder='Create Password'
             value={formData.password}
-            onChange={handleChange} />
+            onChange={handleChange}
+          />
           {errors.password && <p className='error'>{errors.password}</p>}
-          <input type='date'
+
+          <input
+            type='date'
             name='dob'
             placeholder='Date of birth'
             value={formData.dob}
-            onChange={handleChange} />
-          <div className="gender__selection">
-            <input type='radio'
+            onChange={handleChange}
+          />
+          {errors.dob && <p className='error'>{errors.dob}</p>}
+
+          <div className="gender-selection">
+            <input
+              type='radio'
               id='male'
               name='gender'
               value='male'
-              onChange={handleChange} />
+              onChange={handleChange}
+            />
             <label htmlFor="male">Male</label>
-            <input type='radio'
+
+            <input
+              type='radio'
               id='female'
               name='gender'
               value='female'
-              onChange={handleChange} />
+              onChange={handleChange}
+            />
             <label htmlFor="female">Female</label>
           </div>
           {errors.gender && <p className='error'>{errors.gender}</p>}
+
           <button type="submit">Sign Up</button>
         </form>
-        <p className="signin__link">
+
+        <p className="signin-link">
           Already have an account? <a href="#">Sign In</a>
         </p>
       </div>

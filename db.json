@@ -2,10 +2,26 @@
   "users": [
     {
       "id": 1,
-      "email": "d@gmail.com",
+      "email": "anika@gmail.com",
       "name": "anika",
       "password": "tahani51@605W",
       "dob": "1997-02-03",
+      "gender": "female"
+    },
+    {
+      "id": 2,
+      "email": "d@gmail.com",
+      "name": "Anika",
+      "password": "Tahani51$6054",
+      "dob": "1992-06-09",
+      "gender": "female"
+    },
+    {
+      "id": 3,
+      "email": "tahsin@gmail.com",
+      "name": "Anika ",
+      "password": "tahaniWWWWW$1",
+      "dob": "1995-06-04",
       "gender": "female"
     }
   ]
