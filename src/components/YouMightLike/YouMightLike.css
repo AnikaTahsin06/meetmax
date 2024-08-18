@@ -1,0 +1,86 @@
+.like-card {
+    width: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+  }
+  
+  .like-card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .like-header-text {
+    font-size: 14px;
+    font-weight: bold;
+    color: #4F4F4F;
+  }
+  
+  .see-all {
+    font-size: 14px;
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .like-card-content {
+    text-align: center;
+  }
+  
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .like-card-name {
+    font-size: 18px;
+    margin: 10px 0 5px 0;
+    color: #333;
+  }
+  
+  .like-card-title {
+    font-size: 14px;
+    color: #7A7A7A;
+    margin-bottom: 15px;
+  }
+  
+  .icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .icon i {
+    font-size: 18px;
+    color: #7A7A7A;
+  }
+  
+  .like-card-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .ignore-btn, .follow-btn {
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .ignore-btn {
+    background-color: #E0E0E0;
+    color: #555;
+  }
+  
+  .follow-btn {
+    background-color: #007BFF;
+    color: white;
+  }
+  

@@ -19,7 +19,7 @@ const FriendsList = () => {
                     <img src={other} alt="other" />
                 </div>
             </div>
-            <ul>
+            <>
                 {friends.map((friend, index) => (
                     <li key={index} className="friend-item">
                         <div className="friend-info">
@@ -36,7 +36,7 @@ const FriendsList = () => {
                         <span className="last-active">{friend.lastActive}</span>
                     </li>
                 ))}
-            </ul>
+            </>
         </div>
     );
 };

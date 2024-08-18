@@ -1,7 +1,7 @@
 .feed-container {
     display: grid;
     grid-template-rows: auto 1fr;
-    grid-template-columns: 2.2fr 6.8fr 3fr;
+    grid-template-columns: 2.2fr 7.3fr 2.5fr;
     grid-template-areas:
         "nav nav nav"
         "left middle right";
@@ -49,6 +49,7 @@
 }
 
 .middle-content {
+    grid-area: middle;
     background-color: var(--clr-gray-100);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;

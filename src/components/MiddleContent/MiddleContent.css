@@ -1,0 +1,27 @@
+.home-container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 8fr 4fr;
+    grid-template-areas: "homeLeft homeRight";
+    justify-items: center;
+}
+
+.home-left {
+    grid-area: homeLeft;
+}
+
+.home-right {
+    grid-area: homeRight;
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: "homeLeft";
+    }
+
+    .home-right {
+        display: none;
+    }
+
+}

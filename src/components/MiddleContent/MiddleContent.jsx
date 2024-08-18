@@ -1,5 +1,7 @@
 import React from 'react'
 import PostCard from '../PostCard/PostCard';
+import './MiddleContent.css'
+import YouMightLike from '../YouMightLike/YouMightLike';
 
 const MiddleContent = () => {
   const post = {
@@ -18,9 +20,15 @@ const MiddleContent = () => {
     ]
   };
   return (
-    <div>
-      <PostCard post={post} />
-      <PostCard post={post} />
+    <div className="home-container">
+      <div className="home-left">
+        <PostCard post={post} />
+        <PostCard post={post} />
+      </div>
+      <div className="home-right">
+        <YouMightLike />
+        <PostCard post={post} />
+      </div>
     </div>
   )
 }
