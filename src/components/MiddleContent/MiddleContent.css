@@ -7,6 +7,7 @@
 
 .home-left {
     grid-area: homeLeft;
+    padding: 0 15px;
 }
 
 .home-right {

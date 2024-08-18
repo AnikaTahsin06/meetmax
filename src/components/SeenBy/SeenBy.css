@@ -1,0 +1,38 @@
+.seen-by {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.seen-text {
+    font-size: 14px;
+    color: #6B7280;
+    margin-right: 10px;
+}
+
+.avatars {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-left: -8px;
+}
+
+.extra-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #6B7280;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin-left: -8px;
+    border: 2px solid white;
+}

@@ -2,6 +2,7 @@ import React from 'react'
 import PostCard from '../PostCard/PostCard';
 import './MiddleContent.css'
 import YouMightLike from '../YouMightLike/YouMightLike';
+import RecentEvent from '../RecentEvent/RecentEvent';
 
 const MiddleContent = () => {
   const post = {
@@ -23,10 +24,12 @@ const MiddleContent = () => {
     <div className="home-container">
       <div className="home-left">
         <PostCard post={post} />
-        <PostCard post={post} />
+        <RecentEvent />
+        <RecentEvent />
       </div>
       <div className="home-right">
         <YouMightLike />
+        <RecentEvent />
       </div>
     </div>
   )
