@@ -27,7 +27,6 @@ const MiddleContent = () => {
       </div>
       <div className="home-right">
         <YouMightLike />
-        <PostCard post={post} />
       </div>
     </div>
   )

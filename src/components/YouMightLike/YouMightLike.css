@@ -1,86 +1,121 @@
 .like-card {
-    width: 300px;
-    padding: 20px;
+    max-width: 288px;
+    width: 100%;
+    min-width: 10px;
+    /* padding: 20px; */
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     background-color: white;
     font-family: Arial, sans-serif;
     margin-top: 20px;
-  }
-  
-  .like-card-header {
+}
+
+.like-card-header {
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
-  }
-  
-  .like-header-text {
+    border-bottom: 1px solid #eee;
+}
+
+.like-card-content {
+    padding: 5px 20px;
+}
+
+.like-content-header {
+    display: flex;
+    align-items: left;
+}
+
+.like-card-name {
+    font-size: var(--size-base);
+    font-weight: 600;
+    color: var(--clr-gray-1000);
+}
+
+.like-card-title {
+    font-size: var(--size-md);
+    font-weight: 400;
+    color: var(--clr-gray-800);
+}
+
+.user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.like-header-text {
     font-size: 14px;
     font-weight: bold;
     color: #4F4F4F;
-  }
-  
-  .see-all {
+}
+
+.see-all {
     font-size: 14px;
     color: #007BFF;
     text-decoration: none;
-  }
-  
-  .like-card-content {
-    text-align: center;
-  }
-  
-  .profile-pic {
+}
+
+
+.profile-pic {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     margin-bottom: 10px;
-  }
-  
-  .like-card-name {
-    font-size: 18px;
-    margin: 10px 0 5px 0;
-    color: #333;
-  }
-  
-  .like-card-title {
-    font-size: 14px;
-    color: #7A7A7A;
-    margin-bottom: 15px;
-  }
-  
-  .icons {
+}
+
+.like-card-icons {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
+    padding: 10px 0;
     margin-bottom: 20px;
-  }
-  
-  .icon i {
+}
+
+.like-card-icons img {
     font-size: 18px;
     color: #7A7A7A;
-  }
-  
-  .like-card-actions {
+}
+
+.like-card-actions {
     display: flex;
-    justify-content: space-between;
-  }
-  
-  .ignore-btn, .follow-btn {
+    justify-content: center;
+    gap: 25px;
+    padding-bottom: 15px;
+}
+
+.ignore-btn,
+.follow-btn {
     border: none;
     border-radius: 6px;
     padding: 10px 20px;
     font-size: 14px;
     cursor: pointer;
-  }
-  
-  .ignore-btn {
-    background-color: #E0E0E0;
-    color: #555;
-  }
-  
-  .follow-btn {
-    background-color: #007BFF;
-    color: white;
-  }
-  
+}
+
+.ignore-btn,
+.follow-btn {
+    max-width: 116x;
+    width: 100%;
+    height: 36px;
+    min-width: 20px;
+}
+
+.ignore-btn {
+    background-color: var(--clr-white);
+    color: var(--clr-gray-800);
+    font-weight: 600;
+    border: 1px solid var(--clr-gray-400);
+    /* max-width: 580px;
+    width: 100%;
+    min-height: 320px; */
+}
+
+.follow-btn {
+    background-color: var(--clr-primary-blue);
+    color: var(--clr-white);
+    font-weight: 600;
+    
+}

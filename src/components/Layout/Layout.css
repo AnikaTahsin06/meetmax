@@ -1,6 +1,6 @@
 .feed-container {
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: 80px 1fr;
     grid-template-columns: 2.2fr 7.3fr 2.5fr;
     grid-template-areas:
         "nav nav nav"
@@ -11,7 +11,7 @@
 .feed-nav {
     grid-area: nav;
     background-color: var(--clr-white);
-    padding: 20px 15px;
+    padding: 0 15px;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -39,7 +39,7 @@
 
 .middle-content,
 .right-sidebar {
-    padding: 10px;
+    /* padding: 10px; */
     overflow-y: scroll;
     height: 100%;
     scrollbar-width: thin;

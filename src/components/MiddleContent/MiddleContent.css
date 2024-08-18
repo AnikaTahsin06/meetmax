@@ -1,6 +1,5 @@
 .home-container {
     display: grid;
-    grid-template-rows: auto 1fr;
     grid-template-columns: 8fr 4fr;
     grid-template-areas: "homeLeft homeRight";
     justify-items: center;
