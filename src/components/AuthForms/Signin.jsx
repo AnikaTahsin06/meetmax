@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { validateSigninForm } from '../../utils/validation';
 import { signinUser } from '../../services/userService';
+import google from '../../assets/icons/Google.png';
+import apple from '../../assets/icons/Apple.png';
 import './AuthForms.css';
 
 const Signin = () => {
@@ -16,7 +18,7 @@ const Signin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const validationErrors = validateSigninForm(formData);
+    const validationErrors =  validateSigninForm(formData);
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
@@ -42,10 +44,10 @@ const Signin = () => {
         </div>
         <div className="signup-options">
           <button className="google-signin">
-            <i className='fab fa-google'></i> Log in with Google
+            <img src={google} alt="google" /> Log in with Google
           </button>
           <button className="apple-signin">
-            <i className='fab fa-apple'></i> Log in with Apple
+            <img src={apple} alt="apple" /> Log in with Apple
           </button>
         </div>
         <div className="divider">

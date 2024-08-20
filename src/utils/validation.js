@@ -1,8 +1,19 @@
+import { fetchUsers } from '../services/userService';
+
 // src/utils/validation.js
-export const validateSignupForm = (formData) => {
+export const validateSignupForm = async (formData) => {
   let formErrors = {};
 
+  // Fetch all users to check for existing email
+  const users = await fetchUsers();
+  const existingUser = users.find(user => user.email == formData.email);
+  console.log(existingUser)
+
   // Email Validation
+  if (existingUser) {
+    formErrors.email = 'Email is already registered';
+  }
+  
   if (!formData.email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
     formErrors.email = 'Invalid email format';
   } else if (formData.email.length > 50) {
@@ -66,6 +77,7 @@ export const validateSigninForm = (formData) => {
   if (formData.password.length < 6) {
     formErrors.password = 'Password must be at least 6 characters long';
   }
+
   return formErrors;
 };
 

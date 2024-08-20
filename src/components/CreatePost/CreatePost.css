@@ -1,0 +1,68 @@
+.create-card {
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.create-post-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.post-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: #F4F5F7;
+    padding: 10px 16px;
+    border-radius: 24px;
+    font-size: 14px;
+    color: #6B7280;
+}
+
+.create-post-bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.post-options {
+    display: flex;
+    gap: 16px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    font-size: 14px;
+    color: #6B7280;
+    cursor: pointer;
+}
+
+.option img {
+    margin-right: 6px;
+    font-size: 18px;
+}
+
+.post-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}

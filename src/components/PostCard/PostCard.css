@@ -1,10 +1,9 @@
-.post-card {
-    border: 1px solid #ccc;
+/* .post-card {
     border-radius: 10px;
-    /* margin: 20px; */
     padding: 20px;
-    /* margin-bottom: 20px; */
-    background-color: #fff;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: var(--clr-white);
 }
 
 .post-header {
@@ -33,4 +32,4 @@
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-}
+} */

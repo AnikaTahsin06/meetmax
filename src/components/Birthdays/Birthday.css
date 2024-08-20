@@ -1,0 +1,106 @@
+.birthday-card {
+    max-width: 288px;
+    width: 100%;
+    min-width: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: var(--clr-white);
+    margin-top: 20px;
+}
+
+.birthday-card-header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--clr-gray-400);
+}
+
+.birthday-header-text {
+    font-size: 14px;
+    font-weight: bold;
+    color: #4F4F4F;
+}
+
+.birthday-card-content {
+    padding: 5px 20px;
+}
+
+.birthday-content-header {
+    display: flex;
+    align-items: center;
+}
+
+.birthday-card-name {
+    font-size: var(--size-md);
+    font-weight: 600;
+    color: var(--clr-gray-1000);
+}
+
+.birthday-card-title {
+    font-size: var(--size-xs);
+    font-weight: 400;
+    color: var(--clr-gray-800);
+}
+
+.birthday-user-image {
+    width: 45px;
+    height: 45px;
+    border-radius: 20%;
+    margin-right: 10px;
+}
+
+.message-input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.message-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    color: #6B7280;
+    flex: 1;
+    border-radius: 7px;
+    padding: 8px 12px;
+    background-color: #F4F5F7;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+}
+
+.message-input::placeholder {
+    color: #B0B3B8;
+}
+
+.send-button {
+    background-color: transparent;
+    border: none;
+    color: #007BFF;
+    cursor: pointer;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    padding: 8px 12px;
+    background-color: #F4F5F7;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+}
+
+.send-button i {
+    font-size: 16px;
+}
+
+
+.see-all {
+    font-size: 14px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.mt {
+    margin-top: 20px;
+}

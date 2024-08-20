@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { validateSignupForm } from '../../utils/validation';
 import { createUser } from '../../services/userService';
+import google from '../../assets/icons/Google.png';
+import apple from '../../assets/icons/Apple.png';
+import mailIcon from '../../assets/icons/Mail-@.png';
+import smile from '../../assets/icons/Smile.png';
+import lock from '../../assets/icons/Lock.png';
 import './AuthForms.css';
 
 const Signup = () => {
@@ -24,7 +29,9 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const validationErrors = validateSignupForm(formData);
+    const validationErrors = await validateSignupForm(formData);
+
+    console.log("check:", Object.keys(validationErrors).length)
 
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
@@ -48,50 +55,61 @@ const Signup = () => {
         </div>
         <div className="signup-options">
           <button className="google-signin">
-            <i className='fab fa-google'></i> Log in with Google
+            <img src={google} alt="google" /> Log in with Google
           </button>
           <button className="apple-signin">
-            <i className='fab fa-apple'></i> Log in with Apple
+            <img src={apple} alt="apple" /> Log in with Apple
           </button>
         </div>
         <div className="divider">
           <span>OR</span>
         </div>
         <form className="auth-form" onSubmit={handleSubmit}>
-          <input
-            type='email'
-            name='email'
-            placeholder='Your Email'
-            value={formData.email}
-            onChange={handleChange}
-          />
+          <div className="input-wrapper">
+            <img src={mailIcon} alt="Email Icon" className="input-icon" />
+            <input
+              type='email'
+              name='email'
+              placeholder='Your Email'
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </div>
           {errors.email && <p className='error'>{errors.email}</p>}
 
-          <input
-            type='text'
-            name='name'
-            placeholder='Your Name'
-            value={formData.name}
-            onChange={handleChange}
-          />
+          <div className="input-wrapper">
+            <img src={smile} alt="Email Icon" className="input-icon" />
+            <input
+              type='text'
+              name='name'
+              placeholder='Your Name'
+              value={formData.name}
+              onChange={handleChange}
+            />
+          </div>
           {errors.name && <p className='error'>{errors.name}</p>}
 
-          <input
-            type='password'
-            name='password'
-            placeholder='Create Password'
-            value={formData.password}
-            onChange={handleChange}
-          />
+          <div className="input-wrapper">
+            <img src={lock} alt="Email Icon" className="input-icon" />
+            <input
+              type='password'
+              name='password'
+              placeholder='Create Password'
+              value={formData.password}
+              onChange={handleChange}
+            />
+          </div>
           {errors.password && <p className='error'>{errors.password}</p>}
 
-          <input
-            type='date'
-            name='dob'
-            placeholder='Date of birth'
-            value={formData.dob}
-            onChange={handleChange}
-          />
+          <div className="input-wrapper">
+            <input
+              type='date'
+              name='dob'
+              placeholder='Date of birth'
+              value={formData.dob}
+              onChange={handleChange}
+            />
+          </div>
           {errors.dob && <p className='error'>{errors.dob}</p>}
 
           <div className="gender-selection">

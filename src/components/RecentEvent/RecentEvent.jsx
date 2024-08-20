@@ -42,16 +42,6 @@ const RecentEvent = () => {
                 <div className='event-card-divider'></div>
                 <SeenBy count={11} images={images2}/>
                 <div className='mt'></div>
-                {/* <div className="like-card-icons">
-                    <img src={explore} alt="explore" />
-                    <img src={facebook} alt="facebook" />
-                    <img src={twitter} alt="linkedin" />
-                    <img src={instagram} alt="instagram" />
-                </div>
-                <div className="like-card-actions">
-                    <button className="ignore-btn">Ignore</button>
-                    <button className="follow-btn">Follow</button>
-                </div> */}
             </div>
         </div>
     )
