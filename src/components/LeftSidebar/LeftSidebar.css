@@ -46,6 +46,10 @@
     margin-left: auto; /* Push the badge to the far right */
 }
 
+.no-visible-laptop {
+    display: none;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .left-menu {
@@ -66,13 +70,22 @@
         font-size: 12px;
     }
 
-    .left-menu .sidebar-item .text {
-        display: none;
+    .notification-only {
+        position: relative;
     }
 
     .left-menu .notification-badge {
         position: absolute;
         top: 5px;
-        right: 10px;
+        right: 220px;
     }
+
+    .no-visible-tab {
+        display: none;
+    }
+
+    .no-visible-laptop {
+        display: block;
+    }
+ 
 }
