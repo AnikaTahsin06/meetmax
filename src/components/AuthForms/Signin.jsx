@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { validateSigninForm } from '../../utils/validation';
 import { signinUser } from '../../services/userService';
+import { fetchUsers } from '../../services/userService';
 import google from '../../assets/icons/Google.png';
 import apple from '../../assets/icons/Apple.png';
 import './AuthForms.css';
@@ -18,7 +19,8 @@ const Signin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const validationErrors =  validateSigninForm(formData);
+    console.log("form data: ", formData)
+    const validationErrors = validateSigninForm(formData);
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
@@ -27,6 +29,10 @@ const Signin = () => {
     try {
       const success = await signinUser(formData);
       if (success) {
+        const users = await fetchUsers();
+        const existingUser = users.find(user => user.email == formData.email);
+        // Store the user object in localStorage
+        localStorage.setItem('user', JSON.stringify(existingUser));
         navigate('/feed');
       } else {
         setErrors({ general: 'Invalid email or password' });
@@ -54,36 +60,36 @@ const Signin = () => {
           <span>OR</span>
         </div>
         <form className="auth-form" onSubmit={handleSubmit}>
-      <input 
-        type="email" 
-        name="email" 
-        placeholder="Your Email" 
-        value={formData.email} 
-        onChange={handleChange} 
-      />
-      {errors.email && <p className='error'>{errors.email}</p>}
-      
-      <input 
-        type="password" 
-        name="password" 
-        placeholder="Enter Password" 
-        value={formData.password} 
-        onChange={handleChange} 
-      />
-      {errors.password && <p className='error'>{errors.password}</p>}
-      
-      <div className="signin-options">
-        <label>
-          <input type="checkbox" /> Remember me
-        </label>
-        <a href="/" className="forgot-password">Forgot Password?</a>
-      </div>
-      
-      {errors.general && <p className='error'>{errors.general}</p>}
-      <button type="submit">Sign In</button>
-      
-       
-    </form>
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+          {errors.email && <p className='error'>{errors.email}</p>}
+
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter Password"
+            value={formData.password}
+            onChange={handleChange}
+          />
+          {errors.password && <p className='error'>{errors.password}</p>}
+
+          <div className="signin-options">
+            <label>
+              <input type="checkbox" /> Remember me
+            </label>
+            <a href="/" className="forgot-password">Forgot Password?</a>
+          </div>
+
+          {errors.general && <p className='error'>{errors.general}</p>}
+          <button type="submit">Sign In</button>
+
+
+        </form>
         <div className="signup-link">
           You haven't any account? <a href="/">Sign Up</a>
         </div>

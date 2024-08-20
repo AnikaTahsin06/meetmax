@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import homeWhiteIcon from '../../assets/icons/HomeWhite.png'
 import community from '../../assets/icons/Community.png'
 import message from '../../assets/icons/Message.png'
@@ -11,6 +11,14 @@ import logout from '../../assets/icons/LogOut.png'
 import './LeftSidebar.css';  
 
 const LeftSidebar = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    // Clear user data from localStorage
+    localStorage.removeItem('user');
+    // Redirect to sign-in page
+    navigate('/auth/signin');
+  };
   return (
     <div className="left-menu">
       <Link to="/" className="sidebar-item active">
@@ -35,9 +43,12 @@ const LeftSidebar = () => {
       <Link to="/settings" className="sidebar-item">
         <span className="icon"><img src={settings} alt="settings Icon"/></span><span className="text">Settings</span>
       </Link>
-      <Link to="/logout" className="sidebar-item">
+      {/* <Link onClick={handleLogout} className="sidebar-item">
         <span className="icon"><img src={logout} alt="logout Icon"/></span><span className="text">Logout</span>
-      </Link>
+      </Link> */}
+      <button onClick={handleLogout} className="sidebar-item logout-button">
+        <span className="icon"><img src={logout} alt="Logout Icon"/></span><span className="text">Logout</span>
+      </button>
     </div>
   );
 }

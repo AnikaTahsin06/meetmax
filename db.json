@@ -39,6 +39,15 @@
       "password": "Tahani516054$",
       "dob": "1997-06-10",
       "gender": "female"
+    },
+    {
+      "id": 6,
+      "email": "saleh@gmail.com",
+      "name": "Saleh Ahmed",
+      "password": "Tahani516054$$$",
+      "dob": "1997-06-10",
+      "gender": "male",
+      "profilePicture": "/users/images/profile-pic.png"
     }
   ]
 }

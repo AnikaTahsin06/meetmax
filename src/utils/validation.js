@@ -7,7 +7,6 @@ export const validateSignupForm = async (formData) => {
   // Fetch all users to check for existing email
   const users = await fetchUsers();
   const existingUser = users.find(user => user.email == formData.email);
-  console.log(existingUser)
 
   // Email Validation
   if (existingUser) {
