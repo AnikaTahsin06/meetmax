@@ -115,37 +115,39 @@ const Signup = () => {
           </div>
           {errors.password && <p className='error'>{errors.password}</p>}
 
-          <div className="input-wrapper">
-            <input
-              type='date'
-              name='dob'
-              placeholder='Date of birth'
-              value={formData.dob}
-              onChange={handleChange}
-            />
-          </div>
-          {errors.dob && <p className='error'>{errors.dob}</p>}
+          <div className='birth-gender'>
+            <div className="input-wrapper">
+              <input
+                type='date'
+                name='dob'
+                placeholder='Date of birth'
+                value={formData.dob}
+                onChange={handleChange}
+              />
+            </div>
+            {errors.dob && <p className='error'>{errors.dob}</p>}
 
-          <div className="gender-selection">
-            <input
-              type='radio'
-              id='male'
-              name='gender'
-              value='male'
-              onChange={handleChange}
-            />
-            <label htmlFor="male">Male</label>
+            <div className="gender-selection">
+              <input
+                type='radio'
+                id='male'
+                name='gender'
+                value='male'
+                onChange={handleChange}
+              />
+              <label htmlFor="male">Male</label>
 
-            <input
-              type='radio'
-              id='female'
-              name='gender'
-              value='female'
-              onChange={handleChange}
-            />
-            <label htmlFor="female">Female</label>
+              <input
+                type='radio'
+                id='female'
+                name='gender'
+                value='female'
+                onChange={handleChange}
+              />
+              <label htmlFor="female">Female</label>
+            </div>
+            {errors.gender && <p className='error'>{errors.gender}</p>}
           </div>
-          {errors.gender && <p className='error'>{errors.gender}</p>}
 
           <button type="submit">Sign Up</button>
         </form>

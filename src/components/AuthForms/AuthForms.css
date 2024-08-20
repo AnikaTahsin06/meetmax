@@ -192,3 +192,8 @@
 .error {
   color: var(--clr-primary-red);
 }
+
+.birth-gender {
+  display: flex;
+  justify-content: space-between;
+}
