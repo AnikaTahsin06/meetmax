@@ -48,6 +48,15 @@
       "dob": "1997-06-10",
       "gender": "male",
       "profilePicture": "/users/images/profile-pic.png"
+    },
+    {
+      "id": 7,
+      "email": "john@gmail.com",
+      "name": "John Rimon",
+      "password": "Tahani516054$$$",
+      "dob": "1997-06-10",
+      "gender": "male",
+      "profilePicture": "/users/images/Ellipse 535.png"
     }
   ]
 }

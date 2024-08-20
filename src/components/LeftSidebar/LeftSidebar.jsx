@@ -43,7 +43,7 @@ const LeftSidebar = () => {
       </Link>
       <div className=' no-visible-laptop'>
         <Link to="/notifications" className="sidebar-item">
-          <div>
+          <div className='notification-only'>
             <span className="icon"><img src={notification} alt="notification Icon" /></span><span className="text">Notification</span>
             <span className="notification-badge">2</span>
           </div>

@@ -54,7 +54,7 @@ const MiddleContent = () => {
         {
           userName: 'Swapan Bala',
           timeAgo: '9h',
-          commentText: 'Looks amazing and breathtaking. Been there, beautiful! sssssssssssss',
+          commentText: 'Looks amazing and breathtaking. Been there, beautiful!',
           replies: [
             {
               userName: 'Whitechapel Gallery',
@@ -72,7 +72,6 @@ const MiddleContent = () => {
       <div className="home-left">
         <CreatePost />
         <PostList posts={posts} />
-        {/* <PostCard post={post} /> */}
       </div>
       <div className="home-right">
         <YouMightLike />

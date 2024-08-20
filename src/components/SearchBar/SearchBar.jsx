@@ -5,11 +5,6 @@ import './SearchBar.css';
 
 const SearchBar = () => {
     const user = JSON.parse(localStorage.getItem('user'));
-    
-    // // Log the profile picture value and constructed URL for debugging
-    // console.log('Profile Picture:', user.profilePicture);
-    // const profilePictureUrl = "http://localhost:8000/users/images/" + user.profilePicture;
-    // console.log('Constructed URL:', profilePictureUrl);
     return (
         <div className="search-bar">
             <div className="search-input-container">
@@ -25,13 +20,11 @@ const SearchBar = () => {
                 />
             </div>
             <div className="profile-pic" >
-                <h4>{user.name}</h4>
-                <img src={profilePic} alt="" />
-                {/* <img 
-                    src={profilePictureUrl} 
+                <h4 className="login-user">{user.name}</h4>
+                <img 
+                    src={"http://localhost:8000/" + user.profilePicture} 
                     alt="Profile" 
-                    onError={(e) => { e.target.onerror = null; e.target.src = '/path/to/default-image.png'; }}
-                /> */}
+                />
             </div>
         </div>
     );

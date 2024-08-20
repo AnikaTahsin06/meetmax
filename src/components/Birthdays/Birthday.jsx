@@ -1,10 +1,10 @@
 import React from 'react'
-import profile from '../../assets/images/profile-pic.png'
 import upcoming from '../../assets/images/upcomming.png'
 import send from '../../assets/icons/Send.png'
 import './Birthday.css'
 
 const Birthday = () => {
+    const user = JSON.parse(localStorage.getItem('user'));
     return (
         <div className="birthday-card">
             <div className="birthday-card-header">
@@ -13,7 +13,7 @@ const Birthday = () => {
             </div>
             <div className="birthday-card-content">
                 <div className="birthday-content-header">
-                    <img src={profile} alt="User" className="birthday-user-image" />
+                    <img src={"http://localhost:8000/" + user.profilePicture} alt="User" className="birthday-user-image" />
                     <div>
                         <h3 className="birthday-card-name">Edilson De Carvalho</h3>
                         <p className="birthday-card-title">Birthday today</p>

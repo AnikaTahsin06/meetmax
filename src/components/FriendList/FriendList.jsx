@@ -7,8 +7,7 @@ const FriendsList = () => {
         { name: 'Kayleigh Bysouth', profilePic: 'kayleigh.png', lastActive: '2 min', isActive: false },
         { name: 'Jess Phillips MP', profilePic: 'jess.png', lastActive: '', isActive: true },
         { name: 'MP Eslam Hisham', profilePic: 'eslam.png', lastActive: '8 min', isActive: false },
-        { name: 'Leviza Vetvendos', profilePic: '', lastActive: '', isActive: true, initials: 'LV' }, // No profile pic, using initials
-        // Add more friends here...
+        { name: 'Leviza Vetvendos', profilePic: '', lastActive: '', isActive: true, initials: 'LV' },
     ];
 
     return (
