@@ -5,12 +5,22 @@ import { signinUser } from '../../services/userService';
 import { fetchUsers } from '../../services/userService';
 import google from '../../assets/icons/Google.png';
 import apple from '../../assets/icons/Apple.png';
+import mailIcon from '../../assets/icons/Mail-@.png';
+import smile from '../../assets/icons/Smile.png';
+import eye from '../../assets/icons/Eye.png';
+import eyeOff from '../../assets/icons/Eye Off.png';
+import lock from '../../assets/icons/Lock.png';
 import './AuthForms.css';
 
 const Signin = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });
+  const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
+
+  const handlePasswordToggle = () => {
+    setShowPassword(!showPassword);
+  };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -60,22 +70,34 @@ const Signin = () => {
           <span>OR</span>
         </div>
         <form className="auth-form" onSubmit={handleSubmit}>
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            value={formData.email}
-            onChange={handleChange}
-          />
+          <div className="input-wrapper">
+            <img src={mailIcon} alt="Email Icon" className="input-icon" />
+            <input
+              type='email'
+              name='email'
+              placeholder='Your Email'
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </div>
           {errors.email && <p className='error'>{errors.email}</p>}
 
-          <input
-            type="password"
-            name="password"
-            placeholder="Enter Password"
-            value={formData.password}
-            onChange={handleChange}
-          />
+          <div className="input-wrapper">
+            <img src={lock} alt="Lock Icon" className="input-icon" />
+            <input
+              type={showPassword ? 'text' : 'password'}
+              name='password'
+              placeholder='Enter Password'
+              value={formData.password}
+              onChange={handleChange}
+            />
+            <img
+              src={showPassword ? eyeOff : eye}
+              alt="Toggle Password"
+              className="toggle-icon"
+              onClick={handlePasswordToggle}
+            />
+          </div>
           {errors.password && <p className='error'>{errors.password}</p>}
 
           <div className="signin-options">

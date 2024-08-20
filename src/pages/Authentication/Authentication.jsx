@@ -1,18 +1,16 @@
 import React from 'react'
-import { Routes, Route, Link, useNavigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './Authentication.css'
 import Signup from '../../components/AuthForms/Signup';
 import Signin from '../../components/AuthForms/Signin';
+import FeedIcon from '../../components/Icons/FeedIcon';
 import ForgotPassword from '../../components/AuthForms/ForgotPassword';
 
 const Authentication = () => {
-    const navigate = useNavigate();
     return (
         <div className='auth__container'>
             <nav className="navbar">
-                <div className="logo">
-                    Meetmax
-                </div>
+                <div className='feed-logo'><FeedIcon /> <h4>Meetmax</h4></div>
                 <div className="language-select">
                     <select>
                         <option value="English (UK)">English (UK)</option>

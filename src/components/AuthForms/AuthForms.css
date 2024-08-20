@@ -116,6 +116,16 @@
   height: 18px;
 }
 
+.toggle-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
 .gender-selection {
   display: flex;
   justify-content: space-between;

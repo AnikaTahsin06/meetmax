@@ -6,6 +6,8 @@ import google from '../../assets/icons/Google.png';
 import apple from '../../assets/icons/Apple.png';
 import mailIcon from '../../assets/icons/Mail-@.png';
 import smile from '../../assets/icons/Smile.png';
+import eye from '../../assets/icons/Eye.png';
+import eyeOff from '../../assets/icons/Eye Off.png';
 import lock from '../../assets/icons/Lock.png';
 import './AuthForms.css';
 
@@ -17,8 +19,14 @@ const Signup = () => {
     dob: '',
     gender: ''
   });
+  const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
+
+
+  const handlePasswordToggle = () => {
+    setShowPassword(!showPassword);
+  };
 
   const handleChange = (e) => {
     setFormData({
@@ -90,13 +98,19 @@ const Signup = () => {
           {errors.name && <p className='error'>{errors.name}</p>}
 
           <div className="input-wrapper">
-            <img src={lock} alt="Email Icon" className="input-icon" />
+            <img src={lock} alt="Lock Icon" className="input-icon" />
             <input
-              type='password'
+              type={showPassword ? 'text' : 'password'}
               name='password'
               placeholder='Create Password'
               value={formData.password}
               onChange={handleChange}
+            />
+            <img
+              src={showPassword ? eyeOff : eye}
+              alt="Toggle Password"
+              className="toggle-icon"
+              onClick={handlePasswordToggle}
             />
           </div>
           {errors.password && <p className='error'>{errors.password}</p>}
