@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
+import heart1 from '../../assets/icons/Heart.png'
+import heart2 from '../../assets/icons/Heart 2.png'
+import commentIcon from '../../assets/icons/Comment.png'
+import share from '../../assets/icons/Share.png'
 import './PostList.css'
 
 const Post = ({ post }) => {
+    const [liked, setLike] = useState(false);
+
+
+    const handleLike = () => {
+        setLike(!liked);
+    };
     return (
         <div className="post">
             <div className="post-header">
@@ -41,6 +51,11 @@ const Post = ({ post }) => {
                 <span>{post.commentsCount} Comments</span>
                 <span>{post.shares} Shares</span>
             </div>
+            <div className="post-actions comment-section">
+                <span onClick={handleLike} style={{display:'flex'}}><img src={liked ? heart2 :heart1} alt="liked" /> <span>Likes</span></span>
+                <span style={{display:'flex', gap:'3px'}}><img src={commentIcon} alt='comment'/><span>Comments</span></span>
+                <span style={{display:'flex', gap:'3px'}}><img src={share} alt='share' /> <span>Shares</span></span>
+            </div>
             <div className="post-comments">
                 {post.comments.length > 0 ? (
                     post.comments.map((comment, index) => (
@@ -62,7 +77,7 @@ const Post = ({ post }) => {
                         </div>
                     ))
                 ) : (
-                    <div>No comments yet.</div>
+                    <div></div>
                 )}
             </div>
         </div>
