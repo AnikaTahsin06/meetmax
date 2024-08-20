@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { validateSigninForm } from '../../utils/validation';
 import { signinUser } from '../../services/userService';
 import { fetchUsers } from '../../services/userService';
@@ -42,7 +42,7 @@ const Signin = () => {
     }
   };
   return (
-    <div className="container form-container">
+    <div className="form-container">
       <div className="form-body">
         <div className="form-header">
           <h2>Sign In</h2>
@@ -80,9 +80,9 @@ const Signin = () => {
 
           <div className="signin-options">
             <label>
-              <input type="checkbox" /> Remember me
+              <input type="checkbox" />Remember me
             </label>
-            <a href="/" className="forgot-password">Forgot Password?</a>
+            <Link to="/auth/forgot-password" className="forgot-password">Forgot Password?</Link>
           </div>
 
           {errors.general && <p className='error'>{errors.general}</p>}
@@ -90,9 +90,9 @@ const Signin = () => {
 
 
         </form>
-        <div className="signup-link">
-          You haven't any account? <a href="/">Sign Up</a>
-        </div>
+        <p className="signin-link">
+          You haven't any account? <Link to="/">Sign Up</Link>
+        </p>
       </div>
     </div>
   );

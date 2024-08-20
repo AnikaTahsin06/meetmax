@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { validateSignupForm } from '../../utils/validation';
 import { createUser } from '../../services/userService';
 import google from '../../assets/icons/Google.png';
@@ -137,7 +137,7 @@ const Signup = () => {
         </form>
 
         <p className="signin-link">
-          Already have an account? <a href="#">Sign In</a>
+          Already have an account? <Link to="/auth/signin">Sign In</Link>
         </p>
       </div>
     </div>

@@ -4,7 +4,7 @@ import FriendsList from '../FriendList/FriendList'
 const RightSidebar = () => {
   return (
     <div>
-      {/* <FriendsList /> */}
+      <FriendsList />
     </div>
   )
 }

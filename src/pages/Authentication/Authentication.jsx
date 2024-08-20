@@ -25,12 +25,6 @@ const Authentication = () => {
                 <Route path="signin" element={<Signin />} />
                 <Route path="forgot-password" element={<ForgotPassword />} />
             </Routes>
-
-            {/* <div> */}
-                {/* Links for navigation within authentication */}
-                {/* <Link to="/auth/signin">Already have an account?</Link> */}
-                {/* <Link to="/auth/forgot-password">Forgot password?</Link> */}
-            {/* </div> */}
         </div>
     )
 }

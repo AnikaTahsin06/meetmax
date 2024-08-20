@@ -1,6 +1,6 @@
 import { fetchUsers } from '../services/userService';
 
-// src/utils/validation.js
+// Validation Email Form
 export const validateSignupForm = async (formData) => {
   let formErrors = {};
 
@@ -67,6 +67,7 @@ export const validateSignupForm = async (formData) => {
   return formErrors;
 };
 
+// Validation Signup Form
 export const validateSigninForm = (formData) => {
   let formErrors = {};
 
