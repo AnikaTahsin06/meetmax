@@ -1,12 +1,27 @@
 import React from 'react';
 import other from '../../assets/icons/Other.png'
-import './FriendList.css'; // Ensure you have the correct path to your CSS file
+import kayleigh from '../../assets/images/user2.png'
+import jess from '../../assets/images/jess.png'
+import eslam from '../../assets/images/esslam.png'
+import './FriendList.css';
 
 const FriendsList = () => {
     const friends = [
-        { name: 'Kayleigh Bysouth', profilePic: 'kayleigh.png', lastActive: '2 min', isActive: false },
-        { name: 'Jess Phillips MP', profilePic: 'jess.png', lastActive: '', isActive: true },
-        { name: 'MP Eslam Hisham', profilePic: 'eslam.png', lastActive: '8 min', isActive: false },
+        { name: 'Kayleigh Bysouth', profilePic: kayleigh, lastActive: '2 min', isActive: false },
+        { name: 'Jess Phillips MP', profilePic: jess, lastActive: '', isActive: true },
+        { name: 'MP Eslam Hisham', profilePic: eslam, lastActive: '8 min', isActive: false },
+        { name: 'Leviza Vetvendos', profilePic: '', lastActive: '', isActive: true, initials: 'LV' },
+        { name: 'Kayleigh Bysouth', profilePic: kayleigh, lastActive: '2 min', isActive: false },
+        { name: 'Jess Phillips MP', profilePic: jess, lastActive: '', isActive: true },
+        { name: 'MP Eslam Hisham', profilePic: eslam, lastActive: '8 min', isActive: false },
+        { name: 'Leviza Vetvendos', profilePic: '', lastActive: '', isActive: true, initials: 'LV' },
+        { name: 'Kayleigh Bysouth', profilePic: kayleigh, lastActive: '2 min', isActive: false },
+        { name: 'Jess Phillips MP', profilePic: jess, lastActive: '', isActive: true },
+        { name: 'MP Eslam Hisham', profilePic: eslam, lastActive: '8 min', isActive: false },
+        { name: 'Leviza Vetvendos', profilePic: '', lastActive: '', isActive: true, initials: 'LV' },
+        { name: 'Kayleigh Bysouth', profilePic: kayleigh, lastActive: '2 min', isActive: false },
+        { name: 'Jess Phillips MP', profilePic: jess, lastActive: '', isActive: true },
+        { name: 'MP Eslam Hisham', profilePic: eslam, lastActive: '8 min', isActive: false },
         { name: 'Leviza Vetvendos', profilePic: '', lastActive: '', isActive: true, initials: 'LV' },
     ];
 
